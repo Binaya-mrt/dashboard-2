@@ -9,6 +9,7 @@ module.exports = {
         bgGrey: "#9A9A9A1A",
         rosepink: "#EA526F",
         mediumgreen: "#37B76C",
+        spanishGray: "#9A9A9A",
       },
     },
     fontFamily: {

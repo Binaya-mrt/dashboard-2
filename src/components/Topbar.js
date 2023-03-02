@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Assignment from "./Assignment";
 
 function Topbar() {
+  let [graded, setGraded] = useState(false);
+  const toggleGraded = () => {
+    setGraded(!graded);
+  };
+
   return (
     <div className="basis-auto grow shrink ">
       <div className="bg-white flex items-center justify-between py-5  px-10 ">
@@ -77,6 +82,126 @@ function Topbar() {
         </div>
       </div>
       <Assignment />
+      <div className="m-6 bg-white rounded-md py-3 h-1/2 overflow-scroll">
+        <div className="px-5 py-5 flex justify-between items-center">
+          <div className="">
+            <ul className="flex items-center">
+              <li
+                className={
+                  !graded
+                    ? "w-32 text-center py-3 bg-primaryblue text-white rounded-md"
+                    : "px-8 py-3"
+                }
+              >
+                <button onClick={toggleGraded} className="text-md md:text-base">
+                  Not-Graded
+                </button>
+              </li>
+              <li
+                className={
+                  graded
+                    ? "w-32 text-center py-3 bg-primaryblue text-white rounded-md"
+                    : "px-8 py-3"
+                }
+              >
+                <button onClick={toggleGraded}>Graded</button>
+              </li>
+            </ul>
+          </div>
+          <div className="flex bg-bgGrey  items-center gap-4 rounded-full py-1 ">
+            <div className="pl-3">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.33334 13.3333C10.647 13.3333 13.3333 10.647 13.3333 7.33333C13.3333 4.01962 10.647 1.33333 7.33334 1.33333C4.01963 1.33333 1.33334 4.01962 1.33334 7.33333C1.33334 10.647 4.01963 13.3333 7.33334 13.3333Z"
+                  stroke="#565659"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.62 13.7932C12.9733 14.8599 13.78 14.9665 14.4 14.0332C14.9666 13.1799 14.5933 12.4799 13.5666 12.4799C12.8066 12.4732 12.38 13.0665 12.62 13.7932Z"
+                  stroke="#565659"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <input placeholder="Search" className="bg-transparent py-1 " />
+          </div>
+        </div>
+        <div className="flex items-center justify-between px-10 py-5">
+          <div className="flex items-center gap-3">
+            <img
+              src="https://th.bing.com/th/id/OIP.ZmIIA0WkR7-G-Y9tpE1ZKgHaLH?w=185&h=278&c=7&r0&o=5&pid=1.7"
+              className="h-20 w-14 rounded-md"
+            />
+            <div>
+              <h2 className="font-semibold">Binaya Marahatha</h2>
+              <p className="text-spanishGray text-sm">October 29,2022</p>
+              <p className="text-mediumgreen text-sm">On time</p>
+            </div>
+          </div>
+          <div className=" w-32 text-center bg-mediumgreen rounded-md text-white py-3 ">
+            <p className="text-sm">Graded</p>
+            <p>08/10</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-between px-10 py-5">
+          <div className="flex items-center gap-3">
+            <img
+              src="https://th.bing.com/th/id/OIP.ZmIIA0WkR7-G-Y9tpE1ZKgHaLH?w=185&h=278&c=7&r0&o=5&pid=1.7"
+              className="h-20 w-14 rounded-md"
+            />
+            <div>
+              <h2 className="font-semibold">Binaya Marahatha</h2>
+              <p className="text-spanishGray text-sm">October 29,2022</p>
+              <p className="text-mediumgreen text-sm">On time</p>
+            </div>
+          </div>
+          <div className="text-center w-32 bg-primaryblue rounded-md text-white py-3">
+            <p className="text-sm">Grade</p>
+          </div>
+        </div>{" "}
+        <div className="flex items-center justify-between px-10 py-5">
+          <div className="flex items-center gap-3">
+            <img
+              src="https://th.bing.com/th/id/OIP.ZmIIA0WkR7-G-Y9tpE1ZKgHaLH?w=185&h=278&c=7&r0&o=5&pid=1.7"
+              className="h-20 w-14 rounded-md"
+            />
+            <div>
+              <h2 className="font-semibold">Binaya Marahatha</h2>
+              <p className="text-spanishGray text-sm">October 29,2022</p>
+              <p className="text-mediumgreen text-sm">On time</p>
+            </div>
+          </div>
+          <div className="text-center w-32 bg-primaryblue rounded-md text-white py-3">
+            <p className="text-sm">Grade</p>
+          </div>
+        </div>
+        {/* Non graded */}
+        <div className="flex items-center justify-between px-10 py-5">
+          <div className="flex items-center gap-3">
+            <img
+              src="https://th.bing.com/th/id/OIP.ZmIIA0WkR7-G-Y9tpE1ZKgHaLH?w=185&h=278&c=7&r0&o=5&pid=1.7"
+              className="h-20 w-14 rounded-md"
+            />
+            <div>
+              <h2 className="font-semibold">Binaya Marahatha</h2>
+              <p className="text-spanishGray text-sm">October 29,2022</p>
+              <p className="text-mediumgreen text-sm">On time</p>
+            </div>
+          </div>
+          <div className="text-center w-32 bg-primaryblue rounded-md text-white py-3">
+            <p className="text-sm">Grade</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

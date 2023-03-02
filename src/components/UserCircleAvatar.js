@@ -10,7 +10,10 @@ function UserCircleAvatar({ users }) {
     <div className="flex items-center mx-1">
       {maxUsers.map((user, index) => {
         return (
-          <div className="rounded-[50%] bg-[#2BB8D633] -mr-2  h-4 w-4 overflow-hidden   text-[#2BB8D6]">
+          <div
+            key={index}
+            className="rounded-[50%] bg-[#2BB8D633] -mr-2  h-4 w-4 overflow-hidden   text-[#2BB8D6]"
+          >
             <img src={user} />
           </div>
         );
