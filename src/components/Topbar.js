@@ -1,9 +1,10 @@
 import React from "react";
+import Assignment from "./Assignment";
 
 function Topbar() {
   return (
-    <div className="">
-      <div className="bg-white flex items-center  justify-between py-5 pl-20 ">
+    <div className="basis-auto grow shrink ">
+      <div className="bg-white flex items-center justify-between py-5  px-10 ">
         <div className="flex gap-4 text-sm md:text-base">
           <svg
             width="24"
@@ -34,7 +35,7 @@ function Topbar() {
             frog
           </p>
         </div>
-        <div className="flex  items-center gap-5 mr-[5%]">
+        <div className="flex  items-center gap-5 ">
           <svg
             width="20"
             height="20"
@@ -75,6 +76,7 @@ function Topbar() {
           />
         </div>
       </div>
+      <Assignment />
     </div>
   );
 }

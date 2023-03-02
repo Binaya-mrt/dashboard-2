@@ -4,7 +4,7 @@ import Topbar from "./components/Topbar";
 
 function App() {
   return (
-    <div className="flex  ">
+    <div className="flex ">
       <SideBar />
       <Topbar />
     </div>
